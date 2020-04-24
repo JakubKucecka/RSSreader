@@ -74,15 +74,12 @@
     </p>
 </footer>
 <script>
-
     function index() {
         let content_show = document.getElementById("content_show");
         content_show.style.display = "block";
         let content_div = document.getElementById("content_div");
         content_div.style.display = "none";
-
         var input = JSON.stringify({url: document.getElementById("url_input").value});
-
         $.ajax({
             url: 'https://webp.itprof.sk/fetchurl/',
             type: 'POST',
@@ -126,14 +123,11 @@
     }
 
     function sort() {
-
         let date_list = [];
-
         $(data_feeds).find("item").each(function () {
             let feed = $(this);
             date_list.push(feed.find("pubDate").text());
         });
-
 
         date_list.sort(function (a, b) {
             if (document.getElementById("list_input").value === "ASC") {
@@ -142,9 +136,7 @@
                 return Date.parse(b) - Date.parse(a)
             }
         });
-
         remove();
-
         let j;
         let i = 1;
         for (j = 0; j < date_list.length; j++) {
@@ -166,7 +158,6 @@
                 }
             })
         }
-
     }
 
     function show(date) {
