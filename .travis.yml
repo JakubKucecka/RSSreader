@@ -6,9 +6,11 @@ before_script:
   - npm install grunt-cli -g
   - npm install grunt
   - npm install grunt-contrib-cssmin
+  - npm install grunt-contrib-htmlmin
 
 script:
   - grunt cssmin
+  - grunt htmlmin
 
 deploy:
   provider: pages
