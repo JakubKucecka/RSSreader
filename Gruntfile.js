@@ -13,12 +13,12 @@ module.exports = function(grunt) {
                     collapseWhitespace: true
                 },
                 files: {
-                    'dist/index.html': 'src/index.html',
+                    'index.html': 'index.html',
                 }
             },
             dev: {
                 files: {
-                    'dist/index.html': 'src/index.html'
+                    'index.html': 'index.html'
                 }
             }
         }
