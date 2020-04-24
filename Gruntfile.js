@@ -1,6 +1,4 @@
-module.exports = function (grunt) {
-    const mozjpeg = require('imagemin-mozjpeg');
-
+module.exports = function(grunt) {
     grunt.initConfig({
         cssmin: {
             css: {
@@ -24,34 +22,19 @@ module.exports = function (grunt) {
                 }
             }
         },
-        imagemin: {
-            static: {
-                options: {
-                    optimizationLevel: 3,
-                    svgoPlugins: [{removeViewBox: false}],
-                    use: [mozjpeg()]
-                },
+        uglify: {
+            my_target:{
                 files: {
-                    'icon.ico': 'icon.ico',
-                    'imgnotfound.jpg': 'imgnotfound.jpg'
+                    'index.html':['index.html']
                 }
-            },
-            dynamic: {
-                files: [{
-                    expand: true,
-                    cwd: 'src/',
-                    src: ['**/*.{png,jpg,gif,ico}'],
-                    dest: 'dist/'
-                }]
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-uglify-es');
     grunt.registerTask('default', ['cssmin']);
     grunt.registerTask('default', ['htmlmin']);
-    grunt.registerTask('default', ['imagemin']);
 
 };
