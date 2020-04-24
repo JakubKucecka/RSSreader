@@ -85,6 +85,7 @@ function sort() {
 }
 
 function show(date) {
+    window.location.replace("#content_div");
     let content_show = document.getElementById("content_show");
     content_show.style.display = "none";
     let content_div = document.getElementById("content_div");
