@@ -45,6 +45,13 @@ module.exports = function (grunt) {
                     dest: ''
                 }]
             }
+        },
+        uglify: {
+            my_target:{
+                files: {
+                    'script.js':['script.js']
+                }
+            }
         }
     });
 
@@ -54,5 +61,6 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['htmlmin']);
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.registerTask('default', ['imagemin']);
+    grunt.loadNpmTasks('grunt-contrib-uglify-es');
 
 };
