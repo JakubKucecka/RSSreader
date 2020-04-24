@@ -1,0 +1,72 @@
+main{
+    background-color: #CCC;
+}
+
+#search{
+    height: 150px;
+    background-color: grey;
+}
+
+#url_div{
+    width: calc(100% - 40px);
+    text-align: center;
+    color: darkred;
+    margin: 20px;
+}
+
+label{
+    width: 100%;
+}
+
+.button{
+    background-color: darkred;
+    border-radius: 10px;
+    border: solid 1px white;
+    color: white;
+    margin: 10px;
+    min-width: 100px;
+    min-height: 30px;
+}
+
+.button:hover{
+    background-color: red;
+}
+
+#order_div{
+    margin: 20px;
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    text-align: center;
+    color: darkred;
+}
+
+hr{
+    border: solid 1px darkred;
+}
+
+#content_show{
+    margin: 20px;
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    text-align: center;
+    color: darkred;
+}
+
+#content_div{
+    margin: 20px;
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    text-align: left;
+}
+
+img{
+    width: 100%;
+    max-width: 500px;
+}
+
+footer {
+    height: 30px;
+    background-color: grey;
+    text-align: center;
+    color: darkred;
+}
