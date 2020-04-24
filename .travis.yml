@@ -7,10 +7,12 @@ before_script:
   - npm install grunt
   - npm install grunt-contrib-cssmin
   - npm install grunt-contrib-htmlmin
+  - npm install grunt-contrib-imagemin
 
 script:
   - grunt cssmin
   - grunt htmlmin
+  - grunt imagemin
 
 deploy:
   provider: pages
