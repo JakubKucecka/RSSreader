@@ -3,11 +3,9 @@ function index() {
     content_show.style.display = "block";
     let content_div = document.getElementById("content_div");
     content_div.style.display = "none";
-    var input = JSON.stringify({url: document.getElementById("url_input").value});
     $.ajax({
-        url: 'https://webp.itprof.sk/fetchurl/',
-        type: 'POST',
-        data: input,
+        url: 'https://cors-anywhere.herokuapp.com/' + document.getElementById("url_input").value,
+        type: 'GET',
         contentType: 'application/json; charset=utf-8',
         dataType: "text",
         success: function (data) {
