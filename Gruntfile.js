@@ -50,7 +50,6 @@ module.exports = function (grunt) {
             my_target:{
                 files: {
                     'script.js':['script.js']
-                    'Gruntfile.js':['Gruntfile.js']
                 }
             }
         }
