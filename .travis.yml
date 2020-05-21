@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - "stable"
+
+before_script:
+  - npm install grunt-cli -g
+  - npm install grunt
+  - npm install grunt-contrib-cssmin
+  - npm install grunt-contrib-htmlmin
+  - npm install imagemin-mozjpeg
+  - npm install grunt-contrib-imagemin
+  - npm install grunt-contrib-uglify-es
+
+script:
+  - grunt cssmin
+  - grunt htmlmin
+  - grunt imagemin
+  - grunt uglify
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
